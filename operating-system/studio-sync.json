@@ -1,5 +1,60 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-15T00:00:00.000Z",
-  "items": []
+  "updatedAt": "2026-09-30T00:00:00.000Z",
+  "items": [
+    {
+      "externalId": "priority-connector-orchestration",
+      "kind": "priority_task",
+      "title": "Activate governed connector orchestration",
+      "description": "Use runtime connector availability and permissions to route work across engineering, knowledge, operations, design, creative, deployment, AI infrastructure, automation, files, and research systems without claiming unavailable access.",
+      "priority": "high",
+      "status": "active",
+      "dueDate": null,
+      "dependencies": [],
+      "origin": "gpt",
+      "updatedAt": "2026-09-30T00:00:00.000Z"
+    },
+    {
+      "externalId": "priority-github-canonical-alignment",
+      "kind": "priority_task",
+      "title": "Keep GPT and Studio synchronized through the governed GitHub boundary",
+      "description": "Treat the Kingdom Executor GPT repository as canonical intelligence and Studio as the operational body. Preserve server-side credentials, schema validation, conflict detection, and approval-gated writes.",
+      "priority": "high",
+      "status": "active",
+      "dueDate": null,
+      "dependencies": [
+        "priority-connector-orchestration"
+      ],
+      "origin": "gpt",
+      "updatedAt": "2026-09-30T00:00:00.000Z"
+    },
+    {
+      "externalId": "workflow-universal-execution-loop",
+      "kind": "ai_workflow",
+      "title": "Universal execution loop",
+      "description": "Inspect, plan, route, execute, verify, record evidence, reconcile, and continue to the next safe milestone.",
+      "priority": "high",
+      "status": "active",
+      "dueDate": null,
+      "dependencies": [
+        "priority-connector-orchestration"
+      ],
+      "origin": "gpt",
+      "updatedAt": "2026-09-30T00:00:00.000Z"
+    },
+    {
+      "externalId": "workflow-cross-system-verification",
+      "kind": "ai_workflow",
+      "title": "Cross-system verification",
+      "description": "After consequential mutations, independently verify the target state and record evidence before reporting VERIFIED.",
+      "priority": "high",
+      "status": "active",
+      "dueDate": null,
+      "dependencies": [
+        "workflow-universal-execution-loop"
+      ],
+      "origin": "gpt",
+      "updatedAt": "2026-09-30T00:00:00.000Z"
+    }
+  ]
 }
