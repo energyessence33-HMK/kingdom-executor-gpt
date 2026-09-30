@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-30T00:00:00.000Z",
+  "canonicalRepository": "energyessence33-HMK/kingdom-executor-gpt",
+  "studioRepository": "energyessence33-HMK/kingdom-executor-mobile-studio",
+  "purpose": "Runtime routing metadata for Kingdom Executor's connected-system orchestration. This file contains no credentials.",
+  "connectors": [
+    {
+      "id": "github",
+      "capabilities": [
+        "source_control",
+        "code",
+        "issues",
+        "pull_requests",
+        "ci",
+        "releases"
+      ],
+      "authority": "engineering",
+      "writeRisk": "medium"
+    },
+    {
+      "id": "notion",
+      "capabilities": [
+        "knowledge",
+        "prd",
+        "sop",
+        "decisions",
+        "roadmap"
+      ],
+      "authority": "knowledge",
+      "writeRisk": "medium"
+    },
+    {
+      "id": "slack",
+      "capabilities": [
+        "communication",
+        "alerts",
+        "coordination"
+      ],
+      "authority": "communications",
+      "writeRisk": "medium"
+    },
+    {
+      "id": "airtable",
+      "capabilities": [
+        "structured_data",
+        "operations",
+        "reporting"
+      ],
+      "authority": "operations",
+      "writeRisk": "medium"
+    },
+    {
+      "id": "figma",
+      "capabilities": [
+        "ui_design",
+        "design_systems",
+        "handoff"
+      ],
+      "authority": "design",
+      "writeRisk": "medium"
+    },
+    {
+      "id": "canva",
+      "capabilities": [
+        "brand_design",
+        "social_assets",
+        "presentations"
+      ],
+      "authority": "creative",
+      "writeRisk": "medium"
+    },
+    {
+      "id": "adobe",
+      "capabilities": [
+        "creative_editing",
+        "documents",
+        "visual_assets"
+      ],
+      "authority": "creative",
+      "writeRisk": "medium"
+    },
+    {
+      "id": "lovable",
+      "capabilities": [
+        "application_generation",
+        "iteration"
+      ],
+      "authority": "build",
+      "writeRisk": "high"
+    },
+    {
+      "id": "appdeploy",
+      "capabilities": [
+        "deployment",
+        "qa",
+        "monitoring",
+        "release"
+      ],
+      "authority": "delivery",
+      "writeRisk": "high"
+    },
+    {
+      "id": "openai-platform",
+      "capabilities": [
+        "ai_api",
+        "models",
+        "api_infrastructure"
+      ],
+      "authority": "ai_infrastructure",
+      "writeRisk": "high"
+    },
+    {
+      "id": "automations",
+      "capabilities": [
+        "scheduled_jobs",
+        "recurring_checks",
+        "conditional_workflows"
+      ],
+      "authority": "automation",
+      "writeRisk": "medium"
+    },
+    {
+      "id": "files",
+      "capabilities": [
+        "source_artifacts",
+        "documents",
+        "evidence"
+      ],
+      "authority": "evidence",
+      "writeRisk": "low"
+    },
+    {
+      "id": "web",
+      "capabilities": [
+        "current_research",
+        "external_verification"
+      ],
+      "authority": "intelligence",
+      "writeRisk": "low"
+    }
+  ],
+  "routingRules": [
+    "Runtime availability and permission state must be checked before claiming a connector is active.",
+    "Use the smallest connector set that can satisfy the task.",
+    "Reads should precede writes where practical.",
+    "Material writes require verification.",
+    "Cross-system conflicts must be surfaced, not silently overwritten.",
+    "Credentials and secrets never belong in this registry."
+  ]
+}
